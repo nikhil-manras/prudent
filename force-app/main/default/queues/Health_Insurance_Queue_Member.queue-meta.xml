@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Health Insurance Queue Member</name>
+    <queueMembers>
+        <users>
+            <user>manmeet.kaur@manras.com.tatadigital</user>
+            <user>milind.raj@manras.com.tatadigital</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

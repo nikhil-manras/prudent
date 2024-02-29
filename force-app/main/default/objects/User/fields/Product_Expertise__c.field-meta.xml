@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Expertise__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Expertise</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Health Insurance</fullName>
+                <default>false</default>
+                <label>Health Insurance</label>
+            </value>
+            <value>
+                <fullName>Term Life Insurance</fullName>
+                <default>false</default>
+                <label>Term Life Insurance</label>
+            </value>
+            <value>
+                <fullName>Savings Plan Insurance</fullName>
+                <default>false</default>
+                <label>Savings Plan Insurance</label>
+            </value>
+            <value>
+                <fullName>Motor Insurance</fullName>
+                <default>false</default>
+                <label>Motor Insurance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

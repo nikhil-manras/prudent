@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Stages__c</fullName>
+    <externalId>false</externalId>
+    <label>Lead Stages</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Product__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Call Scheduled/WhatsApp initiated</fullName>
+                <default>false</default>
+                <label>Call Scheduled/WhatsApp initiated</label>
+            </value>
+            <value>
+                <fullName>Connected with Advisor</fullName>
+                <default>false</default>
+                <label>Connected with Advisor</label>
+            </value>
+            <value>
+                <fullName>Form Filling initiated by the customer</fullName>
+                <default>false</default>
+                <label>Form Filling initiated by the customer</label>
+            </value>
+            <value>
+                <fullName>Form submitted by the customer</fullName>
+                <default>false</default>
+                <label>Form submitted by the customer</label>
+            </value>
+            <value>
+                <fullName>Form Filling initiated</fullName>
+                <default>false</default>
+                <label>Form Filling initiated</label>
+            </value>
+            <value>
+                <fullName>Form submitted by the advisor</fullName>
+                <default>false</default>
+                <label>Form submitted by the advisor</label>
+            </value>
+            <value>
+                <fullName>Form review accepted</fullName>
+                <default>false</default>
+                <label>Form review accepted</label>
+            </value>
+            <value>
+                <fullName>Form rejected</fullName>
+                <default>false</default>
+                <label>Form rejected</label>
+            </value>
+            <value>
+                <fullName>Payment Initiated</fullName>
+                <default>false</default>
+                <label>Payment Initiated</label>
+            </value>
+            <value>
+                <fullName>Payment Completed</fullName>
+                <default>false</default>
+                <label>Payment Completed</label>
+            </value>
+            <value>
+                <fullName>KYC Completed</fullName>
+                <default>false</default>
+                <label>KYC Completed</label>
+            </value>
+            <value>
+                <fullName>KYC Rejected</fullName>
+                <default>false</default>
+                <label>KYC Rejected</label>
+            </value>
+            <value>
+                <fullName>Policy Cancelled</fullName>
+                <default>false</default>
+                <label>Policy Cancelled</label>
+            </value>
+            <value>
+                <fullName>Policy Issued</fullName>
+                <default>false</default>
+                <label>Policy Issued</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Heath Insurance</controllingFieldValue>
+            <controllingFieldValue>Life Insurance</controllingFieldValue>
+            <valueName>Call Scheduled/WhatsApp initiated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heath Insurance</controllingFieldValue>
+            <controllingFieldValue>Life Insurance</controllingFieldValue>
+            <valueName>Connected with Advisor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heath Insurance</controllingFieldValue>
+            <valueName>Form Filling initiated by the customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heath Insurance</controllingFieldValue>
+            <valueName>Form submitted by the customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heath Insurance</controllingFieldValue>
+            <controllingFieldValue>Life Insurance</controllingFieldValue>
+            <valueName>Payment Initiated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heath Insurance</controllingFieldValue>
+            <controllingFieldValue>Life Insurance</controllingFieldValue>
+            <valueName>Payment Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heath Insurance</controllingFieldValue>
+            <controllingFieldValue>Life Insurance</controllingFieldValue>
+            <valueName>KYC Completed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heath Insurance</controllingFieldValue>
+            <controllingFieldValue>Life Insurance</controllingFieldValue>
+            <valueName>KYC Rejected</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heath Insurance</controllingFieldValue>
+            <controllingFieldValue>Life Insurance</controllingFieldValue>
+            <valueName>Policy Cancelled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Heath Insurance</controllingFieldValue>
+            <controllingFieldValue>Life Insurance</controllingFieldValue>
+            <valueName>Policy Issued</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Life Insurance</controllingFieldValue>
+            <valueName>Form Filling initiated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Life Insurance</controllingFieldValue>
+            <valueName>Form submitted by the advisor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Life Insurance</controllingFieldValue>
+            <valueName>Form review accepted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Life Insurance</controllingFieldValue>
+            <valueName>Form rejected</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>
