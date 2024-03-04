@@ -1,5 +1,5 @@
 name: GitHub Actions Demo
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: ${{ github.actor }} is deploying to QA org 🚀
 # Definition when the workflow should run
 on:
     push:
@@ -39,6 +39,11 @@ jobs:
         run: |
           npm install sfdx-cli --global
           sfdx force --help
+    
+      - name: 'Installing sfdx git delta'
+        run: | 
+            echo y | sfdx plugins:install sfdx-git-delta
+            sfdx plugins    
           
       - name: Decrypt the server.key.enc file & store inside assets folder
         run: |
@@ -48,6 +53,23 @@ jobs:
         run: | 
             sfdx force:auth:jwt:grant --clientid 3MVG9u0ll7_j5qFydUsaG3pn67MjNxDp0Kwk.d7SHcxQjMn1EM3Wysnm4cEdJAtKXuKNuYQIEtQ== --jwtkeyfile server.key --username cicd.user@manras.com.qa.tatadigital --setdefaultdevhubusername -a HubOrg 
             
-      - name: Validate the package
+#      - name: Validate the package
+#        run: |
+#            sfdx force:source:deploy -p force-app -c -u HubOrg
+            
+        # We use SFDX Git Delta to create a directory with only the metadata that has changed.
+        # this allows us to deploy only those changes, as opposed to deploying the entire branch. 
+        # This helps reducing deployment times
+      - name: 'Create delta packages for new, modified or deleted metadata'
+        run: | 
+              mkdir changed-sources
+              sfdx sgd:source:delta --to "HEAD" --from "HEAD^" --output changed-sources/ --generate-delta --source force-app/ 
+
+
+      - name: 'Deploy changes'
         run: |
-            sfdx force:source:deploy -p force-app -c -u HubOrg
+              sfdx force:source:deploy -p "changed-sources/force-app" -c -u HubOrg
+              
+
+      - name: 'Deploy destructive changes (if any)'
+        run: sfdx force:mdapi:deploy -d "changed-sources/destructiveChanges" --checkonly --ignorewarnings -c -u HubOrg
