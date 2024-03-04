@@ -4,7 +4,7 @@
     <excludeButtons>DisableCustomerPortalAccount</excludeButtons>
     <excludeButtons>DisablePartnerPortalAccount</excludeButtons>
     <excludeButtons>IncludeOffline</excludeButtons>
-    <excludeButtons>Share</excludeButtons>
+    <!-- -->
     <layoutSections>
         <customLabel>false</customLabel>
         <detailHeading>false</detailHeading>
