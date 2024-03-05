@@ -8,11 +8,13 @@ public class EventTriggerHandlerTestClass {
         LeadInsert.Status = 'New';
         insert LeadInsert;
         
+        DateTime myDateTime = DateTime.newInstance(2023, 8, 21, 14, 30, 0);
+
         event EventInsert = new Event();
         EventInsert.Subject = 'test';
         EventInsert.WhoId =LeadInsert.Id;
         EventInsert.DurationInMinutes = 15;
-        EventInsert.ActivityDateTime  = 2024-02-21T08:15:00.000+0000;
+        EventInsert.ActivityDateTime  = myDateTime;
         insert EventInsert;
     }
     
