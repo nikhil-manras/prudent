@@ -11,6 +11,7 @@ public class EventTriggerHandlerTestClass {
         event EventInsert = new Event();
         EventInsert.Subject = 'test';
         EventInsert.WhoId =LeadInsert.Id;
+        EventInsert.DurationInMinutes = 15;
         insert EventInsert;
     }
     
