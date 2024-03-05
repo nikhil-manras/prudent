@@ -12,6 +12,7 @@ public class EventTriggerHandlerTestClass {
         EventInsert.Subject = 'test';
         EventInsert.WhoId =LeadInsert.Id;
         EventInsert.DurationInMinutes = 15;
+        EventInsert.ActivityDateTime  = '2024-02-21T08:15:00.000+0000';
         insert EventInsert;
     }
     
