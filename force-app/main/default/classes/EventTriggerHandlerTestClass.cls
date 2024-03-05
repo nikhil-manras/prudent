@@ -11,7 +11,7 @@ public class EventTriggerHandlerTestClass {
         event EventInsert = new Event();
         EventInsert.Subject = 'test';
         EventInsert.WhoId =LeadInsert.Id;
-        
+        //
     }
     
 }
