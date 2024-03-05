@@ -68,7 +68,7 @@ jobs:
 
       - name: 'Deploy changes'
         run: |
-              sfdx force:source:deploy -p "changed-sources/force-app" -c -u HubOrg
+              sfdx force:source:deploy -x "changed-sources/force-app" -c -l -u HubOrg
               
 
       - name: 'Deploy destructive changes (if any)'
