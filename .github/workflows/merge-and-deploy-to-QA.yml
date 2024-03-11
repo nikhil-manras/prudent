@@ -90,9 +90,15 @@ jobs:
               sfdx sgd:source:delta --to "HEAD" --from "HEAD^" --output changed-sources/ --generate-delta --source force-app/ 
 
 
-      - name: 'Deploy changes'
-        run: |
-              sfdx force:source:deploy -x "changed-sources/force-app" RunSpecifiedTests --runtests ${{env.APEX_TESTS}} -c -l -u HubOrg
+      #- name: 'Deploy changes'
+      # run: |
+      #       sfdx force:source:deploy -x "changed-sources/force-app" RunSpecifiedTests --runtests ${{env.APEX_TESTS}} -c -l -u HubOrg
+              
+      - name: 'Deploy the Package to the QA Org'
+        uses: cicddemo/quickDeployment@QA
+        if: ${{ steps.validatePackage.outputs.job_id != '0' }}
+        with:
+          job_id: ${{ steps.validatePackage.outputs.job_id }}
               
 
       - name: 'Deploy destructive changes (if any)'
