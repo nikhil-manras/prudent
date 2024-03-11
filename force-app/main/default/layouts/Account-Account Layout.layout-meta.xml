@@ -42,7 +42,7 @@
                 <field>Phone</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
+                <behavior>Required</behavior>
                 <field>Industry</field>
             </layoutItems>
             <layoutItems>
