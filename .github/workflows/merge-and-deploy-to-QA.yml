@@ -95,7 +95,7 @@ jobs:
       #       sfdx force:source:deploy -x "changed-sources/force-app" RunSpecifiedTests --runtests ${{env.APEX_TESTS}} -c -l -u HubOrg
               
       - name: 'Deploy the Package to the QA Org'
-        uses: cicddemo/quickDeployment@QA
+        uses: quickDeployment@QA
         if: ${{ steps.validatePackage.outputs.job_id != '0' }}
         with:
           job_id: ${{ steps.validatePackage.outputs.job_id }}
