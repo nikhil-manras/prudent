@@ -1,0 +1,31 @@
+name: 'validateOrDeployPackage'
+description: 'Validate or Deploy the metadata in the Org (Sandbox/Production) and choose whether to run tests or not'
+author: 'Manmeet Kaur'
+runs:
+  using: 'node16'
+  main: './index.js'
+inputs:
+  package_path:
+    description: package.xml
+    required: true
+  test_level:
+    description: RunLocalTests
+    required: false
+  org_type:
+    description: sandbox
+    required: false  
+  wait_time:
+    description: 30
+    required: false
+  deploy:
+    description: false
+    required: false    
+  is_destructive:
+    description: 
+    required: false
+outputs:
+  job_id:
+    description: 'Job ID to be used in the next step (Deployment)'
+branding:
+    icon: 'info'
+    color: 'orange'
